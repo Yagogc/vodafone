@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'
+
+import Title from '../ui/Title';
+
 
 class BuyingControls extends Component {
 	render() { 
 		const {data} = this.props;
 		return (
-			<div>
-				<div>{data.groupName}</div>
-				<div>{data.rating}</div>
+			<BuyingControlsWrapper>
+				<Title>
+					{data.groupName}
+				</Title>
+				<div>⭐ {data.rating}</div>
 				<div>Product Description</div>
 				<div>
 					Swatches
@@ -14,9 +20,13 @@ class BuyingControls extends Component {
 					<div>Size</div>
 				</div>
 				<div>Price</div>
-			</div>
+			</BuyingControlsWrapper>
 		)
 	}
 }
 
 export default BuyingControls;
+
+const BuyingControlsWrapper = styled.div`
+	flex-grow: 1;
+`

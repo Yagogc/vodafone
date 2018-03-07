@@ -19,7 +19,6 @@ class Phone extends Component {
 
 export default Phone;
 
-
 const PhoneWrapper = styled.div`
 	max-width: 600px;
 	width: 100%;
@@ -28,8 +27,4 @@ const PhoneWrapper = styled.div`
 	margin: 30px;
 	padding: 15px;
 	display: flex;
-
-	> div {
-		flex-grow: 1;
-	}
 `
