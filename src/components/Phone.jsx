@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import Gallery from './Gallery'
+import BuyingControls from './BuyingControls';
 
 class Phone extends Component {
 	render() {
+		const {data} = this.props;
 		return (
 			<PhoneWrapper>
-				<div>
-					Gallery
-				</div>
-				<div>
-					Buying Controls
-					<div>Product Name</div>
-					<div>Product Rating</div>
-					<div>Product Description</div>
-					<div>
-						Swatches
-						<div>Color</div>
-						<div>Size</div>
-					</div>
-					<div>Price</div>
-				</div>
+			{console.log(data)}
+				<Gallery data={data} />
+				<BuyingControls data={data}/>
 			</PhoneWrapper>
 		);
 	}
@@ -36,4 +27,9 @@ const PhoneWrapper = styled.div`
 	box-shadow: 0 2px 5px rgba(0,0,0,.26);
 	margin: 30px;
 	padding: 15px;
+	display: flex;
+
+	> div {
+		flex-grow: 1;
+	}
 `
