@@ -7,7 +7,21 @@ class Phone extends Component {
 	render() {
 		return (
 		<PhoneWrapper>
-			Vodafone Test
+			<div>
+				Gallery
+			</div>
+			<div>
+				Buying Controls
+				<div>Product Name</div>
+				<div>Product Rating</div>
+				<div>Product Description</div>
+				<div>
+					Swatches
+					<div>Color</div>
+					<div>Size</div>
+				</div>
+				<div>Price</div>
+			</div>
 		</PhoneWrapper>
 		);
 	}
