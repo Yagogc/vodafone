@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 
 import Title from '../ui/Title';
+import Rating from './Rating';
 
 
 class BuyingControls extends Component {
@@ -12,8 +13,8 @@ class BuyingControls extends Component {
 				<Title>
 					{data.groupName}
 				</Title>
-				<div>⭐ {data.rating}</div>
-				<div>Product Description</div>
+				<Rating rate={data.rating} />
+				<div>{data.deviceSummary[0].displayDescription}</div>
 				<div>
 					Swatches
 					<div>Color</div>
