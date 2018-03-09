@@ -5,7 +5,8 @@ import SizeOption from './SizeOption';
 class ColourSwatch extends Component {
 
 	render() {
-		const {defaultDevice, colours, sizes} = this.props.device;
+		const {model, colours, sizes} = this.props.device;
+		const {setColour, setSize} = this.props;
 		return (
 			<div>
 				<div>
@@ -13,7 +14,8 @@ class ColourSwatch extends Component {
 						return <ColourOption 
 						colour={colour} 
 						key={colour}
-						isChecked={defaultDevice.colour === colour}/>
+						isChecked={model.colour === colour}
+						setColour={setColour}/>
 					})}
 				</div>
 				<div>
@@ -21,7 +23,8 @@ class ColourSwatch extends Component {
 						return <SizeOption 
 						size={size} 
 						key={size}
-						isChecked={defaultDevice.memory === size}/>
+						isChecked={model.memory === size}
+						setSize={setSize}/>
 					})}
 				</div>
 			</div>

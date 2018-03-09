@@ -9,19 +9,26 @@ import ColorSwatch from './ColorSwatch';
 
 class BuyingControls extends Component {
 	render() { 
-		const {data, device} = this.props;
+		const {device, setColour, setSize} = this.props;
 		console.log(device);
 		return (
 			<BuyingControlsWrapper>
 				<Title>
-					{data.groupName}
+					{device.deviceName}
 				</Title>
-				<Rating rate={data.rating} />
+				<Rating rate={device.deviceRating} />
 				<Description>
-					{data.deviceSummary[0].displayDescription}
+					{device.model.displayDesc}
 				</Description>
-				<ColorSwatch device={device}/>
-				<div>Price</div>
+				<ColorSwatch
+					device={device}
+					setColour={setColour}
+					setSize={setSize}
+					/>
+				<div>
+					<div>from <span>£{device.model.hardwarePrice}</span> upfront cost</div>
+					<div>When you pay <span>£{device.model.bundlePrice}</span> month</div>
+				</div>
 			</BuyingControlsWrapper>
 		)
 	}

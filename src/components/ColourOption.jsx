@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 class ColourOption extends Component {
-	state = {}
+
 	render() {
-		const {colour, isChecked} = this.props;
+		const {colour, isChecked, setColour} = this.props;
 		return (
 			<React.Fragment>
 				<input 
@@ -11,8 +11,9 @@ class ColourOption extends Component {
 					id={colour}
 					name="colour" 
 					value={colour}
-					defaultChecked={isChecked}/>
-				<label htmlFor={colour}>
+					defaultChecked={isChecked}
+					onClick={() => {setColour(colour)}} />
+				<label htmlFor={colour} >
 					{colour}
 				</label>
 			</React.Fragment>

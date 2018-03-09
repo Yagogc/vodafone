@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-
+import styled from 'styled-components';
 class SizeOption extends Component {
 	state = {}
 	render() {
-		const {size, isChecked} = this.props;
+		const {size, isChecked, setSize} = this.props;
 		return (
 			<React.Fragment>
-				<input 
+				<Input 
 					type="radio" 
 					id={size}
 					name="size" 
 					value={size}
-					defaultChecked={isChecked} />
+					defaultChecked={isChecked}
+					onClick={() => {setSize(size)}}  />
 				<label htmlFor={size}>
 					{size}
 				</label>
@@ -21,3 +22,7 @@ class SizeOption extends Component {
 }
 
 export default SizeOption;
+
+const Input = styled.input`
+	//display:none
+`
