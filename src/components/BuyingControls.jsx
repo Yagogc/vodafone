@@ -5,6 +5,7 @@ import Title from '../ui/Title';
 import Description from '../ui/Description';
 import Rating from './Rating';
 import ColorSwatch from './ColorSwatch';
+import Pricing from './Pricing';
 
 
 class BuyingControls extends Component {
@@ -25,10 +26,10 @@ class BuyingControls extends Component {
 					setColour={setColour}
 					setSize={setSize}
 					/>
-				<div>
-					<div>from <span>£{device.model.hardwarePrice}</span> upfront cost</div>
-					<div>When you pay <span>£{device.model.bundlePrice}</span> month</div>
-				</div>
+				<Pricing
+					monthlyPrice={device.model.bundlePrice}
+					fullPrice={device.model.hardwarePrice}
+				/>
 			</BuyingControlsWrapper>
 		)
 	}
@@ -38,4 +39,7 @@ export default BuyingControls;
 
 const BuyingControlsWrapper = styled.div`
 	flex-grow: 1;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
 `

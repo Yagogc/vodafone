@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+
+import styled from 'styled-components';
+
 import ColourOption from './ColourOption';
 import SizeOption from './SizeOption';
 
@@ -8,11 +11,12 @@ class ColourSwatch extends Component {
 		const {model, colours, sizes} = this.props.device;
 		const {setColour, setSize} = this.props;
 		return (
-			<div>
+			<SwatchWrapper>
 				<div>
 					{colours.map(colour => {
 						return <ColourOption 
-						colour={colour} 
+						colour={colour}
+						colourHex={model.colourHex}
 						key={colour}
 						isChecked={model.colour === colour}
 						setColour={setColour}/>
@@ -27,9 +31,13 @@ class ColourSwatch extends Component {
 						setSize={setSize}/>
 					})}
 				</div>
-			</div>
+			</SwatchWrapper>
 		)
 	}
 }
 
 export default ColourSwatch;
+
+const SwatchWrapper = styled.div`
+	flex-grow: 1;
+`

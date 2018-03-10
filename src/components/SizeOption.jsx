@@ -24,5 +24,5 @@ class SizeOption extends Component {
 export default SizeOption;
 
 const Input = styled.input`
-	//display:none
+	/* display:none */
 `

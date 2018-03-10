@@ -139,11 +139,11 @@ class Phone extends Component {
 export default Phone;
 
 const PhoneWrapper = styled.div`
-	max-width: 600px;
+	max-width: 1280px;
 	width: 100%;
 	background: white;
 	box-shadow: 0 2px 5px rgba(0,0,0,.26);
 	margin: 30px;
-	padding: 15px;
+	padding: 25px;
 	display: flex;
 `
