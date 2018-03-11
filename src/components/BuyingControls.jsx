@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components'
 import PropTypes from 'prop-types';
 
-import Title from '../ui/Title';
-import Description from '../ui/Description';
 import Rating from './Rating';
 import Swatches from './Swatches';
 import Pricing from './Pricing';
@@ -49,4 +47,13 @@ const BuyingControlsWrapper = styled.div`
 	@media (max-width: 768px) {
 		margin-bottom: 20px;
 	}
+`
+
+const Description = styled.p`
+	margin-bottom: 15px;
+	font-size: 14px;
+`
+
+const Title = styled.h1`
+	margin-bottom: 15px;
 `

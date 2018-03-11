@@ -14,21 +14,21 @@ const Swatches = (props) => {
 				<SwatchLabel>Colour: <span>{model.colour}</span></SwatchLabel>
 				{colours.map(colour => {
 					return <ColourOption 
-					colour={colour.colourName}
-					colourHex={colour.colourHex}
-					key={colour.colourName}
-					isChecked={model.colour === colour.colourName}
-					setColour={setColour}/>
+						colour={colour.colourName}
+						colourHex={colour.colourHex}
+						key={colour.colourName}
+						isChecked={model.colour === colour.colourName}
+						setColour={setColour}/>
 				})}
 			</SwatchContainer>
 			<SwatchContainer>
 				<SwatchLabel>Capacity: <span>{model.memory}</span></SwatchLabel>
 				{sizes.map(size => {
 					return <SizeOption 
-					size={size} 
-					key={size}
-					isChecked={model.memory === size}
-					setSize={setSize}/>
+						size={size} 
+						key={size}
+						isChecked={model.memory === size}
+						setSize={setSize}/>
 				})}
 			</SwatchContainer>
 		</SwatchWrapper>

@@ -57,7 +57,7 @@ SizeOption.propTypes = {
 }
 
 const Label = styled.label`
-	background-color: ${props => props.colourHex ? props.colourHex : '#f3f4f1' }
+	background-color: ${props => props.colourHex ? props.colourHex : '#f4f3f7' }
 	width: 40px;
 	height: 40px;
 	border-radius: 5px;

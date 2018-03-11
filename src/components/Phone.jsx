@@ -6,7 +6,9 @@ import Gallery from './Gallery'
 import BuyingControls from './BuyingControls';
 
 class Phone extends Component {
-
+	/**
+	 * Initialize the state.
+	 */
 	state = {
 		name: '',
 		rating: '',
@@ -26,11 +28,19 @@ class Phone extends Component {
 		sizes: [],
 	}
 
+	/**
+	 * When the component will get mounted
+	 * it sets the default Phone.
+	 */
 	componentWillMount() {
-		this.setDefaultModel();
+		this.setDefaultPhone();
 	}
 
-	setDefaultModel = () => {
+	/**
+	 * Sets the state with a default phone and a default model.
+	 * Also defines all the available colours and sizes for the phone
+	 */
+	setDefaultPhone = () => {
 		const {data} = this.props;
 		
 		let {colours} = this.state;
@@ -57,6 +67,10 @@ class Phone extends Component {
 		this.setModel(data.deviceSummary[0]);
 	}
 
+	/**
+	 * Sets the default or selected model of the phone.
+	 * @param {object} device
+	 */
 	setModel = (device) => {
 		const {data} = this.props;
 		
@@ -80,10 +94,12 @@ class Phone extends Component {
 				}
 			}
 		});
-		
-		//this.setModelByColour("Gold");
 	}
 
+	/**
+	 * Sets model based on the colour selected by the user.
+	 * @param {string} colour
+	 */
 	setModelByColour = (colour) => {
 		const {data} = this.props;
 		
@@ -95,6 +111,10 @@ class Phone extends Component {
 		
 	}
 
+	/**
+	 * Sets model based on the size selected by the user.
+	 * @param {string} size
+	 */
 	setModelBySize = (size) => {
 		const {data} = this.props;
 		
