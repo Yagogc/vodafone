@@ -22,6 +22,7 @@ Pricing.propTypes = {
 const PricingWrapper = styled.div`
 	background: #f4f4f4;
 	display:flex;
+	align-items: center;
 
 	> div {
 		display: inline-block;
