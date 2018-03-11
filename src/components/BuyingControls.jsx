@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Title from '../ui/Title';
 import Description from '../ui/Description';
 import Rating from './Rating';
-import ColorSwatch from './ColorSwatch';
+import Swatches from './Swatches';
 import Pricing from './Pricing';
 
 
@@ -15,13 +15,13 @@ class BuyingControls extends Component {
 		return (
 			<BuyingControlsWrapper>
 				<Title>
-					{device.deviceName}
+					{device.name}
 				</Title>
-				<Rating rate={device.deviceRating} />
+				<Rating rate={device.rating} />
 				<Description>
 					{device.model.displayDesc}
 				</Description>
-				<ColorSwatch
+				<Swatches
 					device={device}
 					setColour={setColour}
 					setSize={setSize}

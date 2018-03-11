@@ -10,6 +10,7 @@ class Gallery extends Component {
 				<Img
 					src={device.imgPath}
 					alt={device.displayName}
+					title={device.displayName}
 				/>
 			</GalleryWrapper>
 		)

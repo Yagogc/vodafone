@@ -7,8 +7,8 @@ import BuyingControls from './BuyingControls';
 class Phone extends Component {
 
 	state = {
-		deviceName: '',
-		deviceRating: '',
+		name: '',
+		rating: '',
 		model: {
 			id: '',
 			colour: '',
@@ -32,10 +32,10 @@ class Phone extends Component {
 	setDefaultModel = () => {
 		const {data} = this.props;
 		
-		let colours = this.state.colours;
+		let {colours} = this.state;
 		data.deviceSummary.map( device => {
-			if (!colours.includes(device.colourName)) {
-				colours.push(device.colourName);
+			if (!colours.find(colour => colour.colourName === device.colourName)) {
+				colours.push({colourName: device.colourName, colourHex: device.colourHex});
 			}
 			return false;
 		});
@@ -48,8 +48,8 @@ class Phone extends Component {
 			return false;
 		});
 		this.setState({
-			deviceName: data.groupName,
-			deviceRating: data.rating,
+			name: data.groupName,
+			rating: data.rating,
 			colours,
 			sizes,
 		});
