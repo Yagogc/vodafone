@@ -36,7 +36,10 @@ export default BuyingControls;
 
 const BuyingControlsWrapper = styled.div`
 	flex-grow: 1;
-	width: 50%;
+	min-width: 50%;
 	display: flex;
 	flex-direction: column;
+	@media (max-width: 768px) {
+		margin-bottom: 20px;
+	}
 `

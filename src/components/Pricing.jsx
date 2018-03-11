@@ -20,6 +20,7 @@ const PricingWrapper = styled.div`
 	> div {
 		display: inline-block;
 		flex-grow: 1;
+		min-width: 50%;
 		padding: 20px;
 		position: relative;
 

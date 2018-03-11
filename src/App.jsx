@@ -22,9 +22,10 @@ export default App;
 
 
 const Container = styled.div`
-	height: 100vh;
+	min-height: 100vh;
+	height: 100%;
 	display:flex;
 	align-items: center;
 	justify-content: center;
-	background: #f1f1f1;
+	flex-direction: column;
 `

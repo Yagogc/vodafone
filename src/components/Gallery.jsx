@@ -22,7 +22,7 @@ const GalleryWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 50%;
+	min-width: 50%;
 `
 
 const Img = styled.img`

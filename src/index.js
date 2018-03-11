@@ -18,4 +18,7 @@ injectGlobal`
 		font-family: sans-serif;
 		box-sizing: border-box;
 	}
+	html {
+		background: #f1f1f1;
+	}
 `

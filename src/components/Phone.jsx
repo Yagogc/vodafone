@@ -121,11 +121,15 @@ class Phone extends Component {
 export default Phone;
 
 const PhoneWrapper = styled.div`
-	max-width: 1280px;
+	max-width: 970px;
 	width: 100%;
 	background: white;
 	box-shadow: 0 2px 5px rgba(0,0,0,.26);
-	margin: 30px;
+	margin: 30px auto;
 	padding: 25px;
 	display: flex;
+
+	@media (max-width: 768px) {
+		flex-direction: column-reverse;
+	}
 `
