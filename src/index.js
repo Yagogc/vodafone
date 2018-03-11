@@ -17,6 +17,7 @@ injectGlobal`
 		padding: 0;
 		font-family: sans-serif;
 		box-sizing: border-box;
+		font-family: 'Oxygen', sans-serif;
 	}
 	html {
 		background: #f1f1f1;
