@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import PropTypes from 'prop-types';
 
 import Title from '../ui/Title';
 import Description from '../ui/Description';
@@ -33,6 +34,12 @@ const BuyingControls = (props) => {
 }
 
 export default BuyingControls;
+
+BuyingControls.propTypes = {
+	device: PropTypes.object.isRequired,
+	setColour: PropTypes.func.isRequired,
+	setSize: PropTypes.func.isRequired,
+}
 
 const BuyingControlsWrapper = styled.div`
 	flex-grow: 1;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 export const SizeOption = (props) =>{
@@ -40,6 +41,19 @@ export const ColourOption = (props) => {
 			</Label>
 		</React.Fragment>
 	)
+}
+
+ColourOption.propTypes = {
+	colour: PropTypes.string.isRequired,
+	colourHex: PropTypes.string.isRequired,
+	isChecked: PropTypes.bool.isRequired,
+	setColour: PropTypes.func.isRequired,
+}
+
+SizeOption.propTypes = {
+	size: PropTypes.string.isRequired,
+	isChecked: PropTypes.bool.isRequired,
+	setSize: PropTypes.func.isRequired,
 }
 
 const Label = styled.label`

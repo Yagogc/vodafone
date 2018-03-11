@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Gallery from './Gallery'
 import BuyingControls from './BuyingControls';
@@ -118,6 +119,11 @@ class Phone extends Component {
 }
 
 export default Phone;
+
+Phone.propTypes = {
+	data: PropTypes.object.isRequired,
+}
+
 
 const PhoneWrapper = styled.div`
 	max-width: 970px;

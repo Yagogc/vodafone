@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import PropTypes from 'prop-types';
 
 
 const Gallery = (props) => {
@@ -16,6 +17,10 @@ const Gallery = (props) => {
 }
 
 export default Gallery;
+
+Gallery.propTypes = {
+	device: PropTypes.object.isRequired,
+}
 
 const GalleryWrapper = styled.div`
 	flex-grow: 1;

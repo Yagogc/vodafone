@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import {ColourOption, SizeOption} from './Options';
@@ -37,6 +37,12 @@ const Swatches = (props) => {
 
 
 export default Swatches;
+
+Swatches.propTypes = {
+	device: PropTypes.object.isRequired,
+	setColour: PropTypes.func.isRequired,
+	setSize: PropTypes.func.isRequired,
+}
 
 const SwatchWrapper = styled.div`
 	flex-grow: 1;

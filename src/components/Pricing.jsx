@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
 const Pricing = (props) => {
@@ -12,6 +13,11 @@ const Pricing = (props) => {
 }
 
 export default Pricing;
+
+Pricing.propTypes = {
+	monthlyPrice: PropTypes.string.isRequired,
+	fullPrice: PropTypes.string.isRequired,
+}
 
 const PricingWrapper = styled.div`
 	background: #f4f4f4;
