@@ -47,12 +47,16 @@ const SwatchWrapper = styled.div`
 const SwatchLabel = styled.p`
 	font-size: 14px;
 	margin-bottom: 10px;
+	flex: 1;
+	width: 100%;
 	
 	> span {
 		font-weight: bold;
 	}
 `
 const SwatchContainer = styled.div`
-	display: inline-block;
-	width: 50%;
+	display: block;
+	flex-grow: 1;
+	min-width: 50%;
+	margin-bottom: 10px;
 `
