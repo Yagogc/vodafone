@@ -23,7 +23,6 @@ export const SizeOption = (props) =>{
 
 export const ColourOption = (props) => {
 	const {colour, colourHex, isChecked, setColour} = props;
-	console.log(isChecked)
 	return (
 		<React.Fragment>
 			<Input 

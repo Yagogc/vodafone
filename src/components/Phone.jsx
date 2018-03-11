@@ -104,7 +104,6 @@ class Phone extends Component {
 		}
 	}
 	render() {
-		const {data} = this.props;
 		return (
 			<PhoneWrapper>
 				<Gallery device={this.state.model} />
