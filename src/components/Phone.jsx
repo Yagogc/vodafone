@@ -85,16 +85,8 @@ class Phone extends Component {
 
 	setModelByColour = (colour) => {
 		const {data} = this.props;
-		console.log(colour);
 		
-		let deviceFiltered = data.deviceSummary.filter(device => device.colourName === colour);
-
-		// console.log('deviceFiltered',deviceFiltered);
-		// console.log('STATE MEMORY',this.state);
-		// console.log('STATE MEMORY',this.state.model.memory);
-
-		deviceFiltered = deviceFiltered.filter(device => device.memory === this.state.model.memory);
-		// console.log('deviceFiltered',deviceFiltered);
+		let deviceFiltered = data.deviceSummary.filter(device => device.colourName === colour && device.memory === this.state.model.memory);
 
 		if (deviceFiltered[0]) {
 			this.setModel(deviceFiltered[0])
@@ -104,16 +96,8 @@ class Phone extends Component {
 
 	setModelBySize = (size) => {
 		const {data} = this.props;
-		console.log('size',size);
 		
-		let deviceFiltered = data.deviceSummary.filter(device => device.colourName === this.state.model.colour);
-
-		// console.log('deviceFiltered',deviceFiltered);
-		// console.log('STATE MEMORY',this.state);
-		// console.log('STATE MEMORY',this.state.model.memory);
-
-		deviceFiltered = deviceFiltered.filter(device => device.memory === size);
-		// console.log('deviceFiltered',deviceFiltered);
+		let deviceFiltered = data.deviceSummary.filter(device => device.colourName === this.state.model.colour && device.memory === size);
 
 		if (deviceFiltered[0]) {
 			this.setModel(deviceFiltered[0])
@@ -121,10 +105,8 @@ class Phone extends Component {
 	}
 	render() {
 		const {data} = this.props;
-		console.log(data);
 		return (
 			<PhoneWrapper>
-			{console.log(data)}
 				<Gallery device={this.state.model} />
 				<BuyingControls
 					device={this.state}

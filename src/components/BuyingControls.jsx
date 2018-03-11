@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 
 import Title from '../ui/Title';
@@ -8,31 +8,28 @@ import Swatches from './Swatches';
 import Pricing from './Pricing';
 
 
-class BuyingControls extends Component {
-	render() { 
-		const {device, setColour, setSize} = this.props;
-		console.log(device);
-		return (
-			<BuyingControlsWrapper>
-				<Title>
-					{device.name}
-				</Title>
-				<Rating rate={device.rating} />
-				<Description>
-					{device.model.displayDesc}
-				</Description>
-				<Swatches
-					device={device}
-					setColour={setColour}
-					setSize={setSize}
-					/>
-				<Pricing
-					monthlyPrice={device.model.bundlePrice}
-					fullPrice={device.model.hardwarePrice}
+const BuyingControls = (props) => {
+	const {device, setColour, setSize} = props;
+	return (
+		<BuyingControlsWrapper>
+			<Title>
+				{device.name}
+			</Title>
+			<Rating rate={device.rating} />
+			<Description>
+				{device.model.displayDesc}
+			</Description>
+			<Swatches
+				device={device}
+				setColour={setColour}
+				setSize={setSize}
 				/>
-			</BuyingControlsWrapper>
-		)
-	}
+			<Pricing
+				monthlyPrice={device.model.bundlePrice}
+				fullPrice={device.model.hardwarePrice}
+			/>
+		</BuyingControlsWrapper>
+	)
 }
 
 export default BuyingControls;

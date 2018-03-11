@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 
-class Pricing extends Component {
-	render() { 
-		const {monthlyPrice, fullPrice} = this.props;
-		return (
-			<PricingWrapper>
-				<div>from <span>£{fullPrice}</span> upfront cost</div>
-				<div>When you pay <span>£{monthlyPrice}</span> month</div>
-			</PricingWrapper>
-		)
-	}
+const Pricing = (props) => {
+	const {monthlyPrice, fullPrice} = props;
+	return (
+		<PricingWrapper>
+			<div>from <span>£{fullPrice}</span> upfront cost</div>
+			<div>When you pay <span>£{monthlyPrice}</span> a month</div>
+		</PricingWrapper>
+	)
 }
 
 export default Pricing;
@@ -23,7 +21,19 @@ const PricingWrapper = styled.div`
 		display: inline-block;
 		flex-grow: 1;
 		padding: 20px;
-		text-align: center;
+		position: relative;
+
+		&:first-child:after {
+			content: '';
+			position: absolute;
+			display: block
+			height: 60%;
+			width: 1px;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			background: #ddd;
+		}
 
 		> span {
 			color: #cf1710;
