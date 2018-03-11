@@ -136,5 +136,6 @@ const PhoneWrapper = styled.div`
 
 	@media (max-width: 768px) {
 		flex-direction: column-reverse;
+		margin-top: 0;
 	}
 `
