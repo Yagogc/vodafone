@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-class Rating extends Component {
-	render() {
-		const {rate} = this.props;
-		return (
-			<RatingWrapper>
-				{Array.apply(null, { length: Math.round(rate) }).map((e, i) => (
-					<Star key={i} />
-				))}
-			</RatingWrapper>
-		)
-	}
+const Rating = (props) => {
+	const {rate} = props;
+	return (
+		<RatingWrapper>
+			{Array.apply(null, { length: Math.round(rate) }).map((e, i) => (
+				<Star key={i} />
+			))}
+		</RatingWrapper>
+	)
 }
 
 const Star = () => {
