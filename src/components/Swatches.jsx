@@ -46,6 +46,7 @@ const SwatchWrapper = styled.div`
 `
 const SwatchLabel = styled.p`
 	font-size: 14px;
+	margin-bottom: 10px;
 	
 	> span {
 		font-weight: bold;
