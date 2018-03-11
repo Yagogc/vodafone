@@ -1,11 +1,21 @@
-This project was created with [Create React App](https://github.com/facebookincubator/create-react-app).
+## Stack
+
+The stack choosed for this project is:
+
+* JS Framework: [React](https://reactjs.org/).
+* CSS Preprocessor: [Styled Components](https://www.styled-components.com/) (CSS-in-JS library).
+
+The main reasons to choose React is the hight reusable componets, a clean abstraction and thje fast rendering through the Virtual DOM.
+
+And like react the use of reusable components is reason behind the use of Styled Components.
+
+The project was created with [Create React App](https://github.com/facebookincubator/create-react-app).
 ## Table of Contents
 
 - [Available Scripts](#available-scripts)
 - [Folder Structure](#folder-structure)
-- [Folder Structure](#folder-structure)
-- [Folder Structure](#folder-structure)
-- [Updating to New Releases](#updating-to-new-releases)
+- [Supported Browsers](#supported-browsers)
+- [Extra Dependencies and Polyfills](#extra-dependencies-and-polyfills)
 
 
 ## Available Scripts
@@ -53,15 +63,16 @@ vodafone/
 This project was tested with:
 
 - Chrome (Version 64) ✔️
-- Chrome for Android (Version 64) ✔️
+- Chrome for Android (Version 64) ✔️ (PWA Compliant)
 - Firefox (Version 58) ✔️
 - IE 11 ✔️
 - Edge 16 ✔️
 - Safari 11 ✔️
 - IOS Safari 11 ✔️
-## Supported Language Features and Polyfills
+## Extra Dependencies and Polyfills
 
-This project supports a superset of the latest JavaScript standard.<br>
-In addition to [ES6](https://github.com/lukehoban/es6features) syntax features, it also supports:
+Besides the dependencies of React (via [Create React App](https://github.com/facebookincubator/create-react-app)), tis project uses the followings:<br>
 
-* [Babel Polyfill](https://www.npmjs.com/package/babel-polyfill).
+* [Babel Polyfill](https://www.npmjs.com/package/babel-polyfill): Polyfills  to support older browsers (eg: IE11).
+* [Styled Components](https://www.styled-components.com/): CSS-in-JS library.
+
