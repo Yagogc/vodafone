@@ -7,9 +7,9 @@ The stack choosed for this project is:
 * JS Framework: [React](https://reactjs.org/).
 * CSS Preprocessor: [Styled Components](https://www.styled-components.com/) (CSS-in-JS library).
 
-The main reasons to choose React is the hight reusable components, a clean abstraction and the fast rendering through the Virtual DOM.
+The main reasons to choose React are: high reusable components, a clean abstraction and the fast rendering through the Virtual DOM.
 
-And like React, the reusable components is reason behind the use of Styled Components.
+Also, I choosed Styled Components because the same very reasons as React, in particular the reusability part
 
 The project was created with [Create React App](https://github.com/facebookincubator/create-react-app).
 ## Table of Contents
@@ -73,7 +73,7 @@ This project was tested with:
 - IOS Safari 11 ✔️
 ## Extra Dependencies and Polyfills
 
-Besides the dependencies of React (via [Create React App](https://github.com/facebookincubator/create-react-app)), tis project uses the followings:<br>
+Besides the dependencies of React (via [Create React App](https://github.com/facebookincubator/create-react-app)), this project uses the followings:<br>
 
 * [Babel Polyfill](https://www.npmjs.com/package/babel-polyfill): Polyfills  to support older browsers (eg: IE11).
 * [Styled Components](https://www.styled-components.com/): CSS-in-JS library.
