@@ -7,9 +7,9 @@ The stack choosed for this project is:
 * JS Framework: [React](https://reactjs.org/).
 * CSS Preprocessor: [Styled Components](https://www.styled-components.com/) (CSS-in-JS library).
 
-The main reasons to choose React is the hight reusable componets, a clean abstraction and thje fast rendering through the Virtual DOM.
+The main reasons to choose React is the hight reusable components, a clean abstraction and the fast rendering through the Virtual DOM.
 
-And like react the use of reusable components is reason behind the use of Styled Components.
+And like React, the reusable components is reason behind the use of Styled Components.
 
 The project was created with [Create React App](https://github.com/facebookincubator/create-react-app).
 ## Table of Contents
